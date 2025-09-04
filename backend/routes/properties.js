@@ -207,7 +207,7 @@ router.post('/', authenticateToken, upload.fields([
 });
 
 // Get property details
-router.get('/:id', auth, async (req, res) => {
+router.get('/:id', authenticateToken, async (req, res) => {
   try {
     const { id } = req.params;
     
@@ -249,7 +249,7 @@ router.get('/:id', auth, async (req, res) => {
 });
 
 // Get user properties
-router.get('/user/:username', auth, async (req, res) => {
+router.get('/user/:username', authenticateToken, async (req, res) => {
   try {
     const { username } = req.params;
     
@@ -280,7 +280,7 @@ router.get('/user/:username', auth, async (req, res) => {
 });
 
 // Like/Unlike property
-router.post('/:id/like', auth, async (req, res) => {
+router.post('/:id/like', authenticateToken, async (req, res) => {
   const propertyId = req.params.id;
 
   db.get('SELECT id FROM likes WHERE user_id = ? AND property_id = ?', [req.user.id, propertyId], (err, existingLike) => {
