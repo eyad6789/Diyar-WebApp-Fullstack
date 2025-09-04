@@ -1,7 +1,8 @@
 {
-  "name": "instagram-clone-frontend",
-  "version": "0.1.0",
+  "name": "diyari-frontend",
+  "version": "1.0.0",
   "private": true,
+  "license": "BSD-3-Clause",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -42,5 +43,8 @@
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29"
   },
+  "description": "Frontend interface for Diyari Arabic Real Estate Platform",
+  "keywords": ["real-estate", "arabic", "react", "property", "diyari", "frontend"],
+  "author": "Diyari Development Team",
   "proxy": "http://localhost:5000"
 }

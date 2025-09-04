@@ -1,7 +1,7 @@
 {
-  "name": "instagram-clone-backend",
+  "name": "diyari-backend",
   "version": "1.0.0",
-  "description": "Backend API for Instagram clone application",
+  "description": "Backend API for Diyari Arabic Real Estate Platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "keywords": ["instagram", "social-media", "api", "express"],
-  "author": "Your Name",
-  "license": "MIT"
+  "keywords": ["real-estate", "arabic", "property", "api", "express", "diyari"],
+  "author": "Eyad Qasim Rahim",
+  "license": "Apache-2.0"
 }
