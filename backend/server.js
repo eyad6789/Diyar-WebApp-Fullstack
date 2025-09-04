@@ -9,6 +9,7 @@ const propertyRequestRoutes = require('./routes/property-requests');
 const messageRoutes = require('./routes/messages');
 const notificationRoutes = require('./routes/notifications');
 const userRoutes = require('./routes/users');
+const adminRoutes = require('./routes/admin');
 const { initializeDatabase } = require('./models/database');
 
 const app = express();
@@ -32,6 +33,25 @@ app.use('/api/property-requests', propertyRequestRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/admin', adminRoutes);
+
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Diyari Real Estate API', 
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      properties: '/api/properties',
+      users: '/api/users',
+      messages: '/api/messages',
+      notifications: '/api/notifications',
+      propertyRequests: '/api/property-requests',
+      admin: '/api/admin'
+    }
+  });
+});
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
